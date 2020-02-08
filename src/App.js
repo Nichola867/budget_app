@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Expense } from './Models/Expense';
+import { Dashboard } from './Components/Dashboard';
 
 export class App extends Component {
   state = {
@@ -16,15 +17,12 @@ export class App extends Component {
       <div className="App">
         <header className="App-header">
           Budget App
-      </header>
-      <div>
-        Income: £{(this.state.income/100).toFixed(2)}
-      </div>
+        </header>
 
-      <div>
-        Expenses: 
-        {this.state.expenses.map(n => n.desc).join(", ")}
-      </div>
+        <Dashboard
+          income={this.state.income}
+          expenses={this.state.expenses}
+        />
       </div>
     );
   }
