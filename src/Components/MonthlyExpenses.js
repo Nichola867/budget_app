@@ -20,7 +20,7 @@ export class MonthlyExpenses extends Component {
           {this.props.categories
             .sort((a, b) => b.estAmount - a.estAmount)
             .map(n => (
-              <div className='MonthlyExpenses__element' key={n.category} title='Expense breakdown'>
+              <div className='MonthlyExpenses__element' key={n.category} title='Monthly expense'>
                 {`${n.category}: £${(n.actAmount / 100).toFixed(2)}/£${(n.estAmount / 100).toFixed(2)}`}
               </div>
             )

@@ -52,3 +52,18 @@
 .MonthlyExpenses__title {
   font-weight: bold;
 }
+
+.Breakdown {
+  background-color: lightgrey;
+  width: 30%;
+  min-width: 250px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 1%;
+}
+
+
+.Breakdown__title {
+  font-weight: bold;
+}

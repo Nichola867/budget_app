@@ -3,6 +3,7 @@ import '../App.css';
 import { Summary } from './Summary';
 import { MonthlyExpenses } from './MonthlyExpenses';
 import PropTypes from 'prop-types';
+import { Breakdown } from './Breakdown';
 
 export class Dashboard extends Component {
   static get propTypes() {
@@ -27,12 +28,11 @@ export class Dashboard extends Component {
           estAmount: n.estAmount,
           actAmount: n.actAmount
         })
-      } 
+      }
     })
 
     return categoryArray
   }
-
 
   render() {
     const categories = this.getCategories()
@@ -47,6 +47,9 @@ export class Dashboard extends Component {
           expenses={this.props.expenses}
         />
         <MonthlyExpenses
+          categories={categories}
+        />
+        <Breakdown
           categories={categories}
         />
       </div>

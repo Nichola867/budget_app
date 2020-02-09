@@ -21,7 +21,7 @@ test('Categories are displayed on screen in descending order of estimated amount
   const { getAllByTitle } = render(<MonthlyExpenses
     categories={categories}
   />);
-  const expenseElements = getAllByTitle(/Expense breakdown/i);
+  const expenseElements = getAllByTitle(/Monthly expense/i);
 
   expect(expenseElements[0].innerHTML).toEqual('test2: £20.00/£300.00')
   expect(expenseElements[1].innerHTML).toEqual('test3: £10.00/£200.00')
